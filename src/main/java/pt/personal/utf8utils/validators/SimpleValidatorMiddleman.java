@@ -3,6 +3,7 @@ package pt.personal.utf8utils.validators;
 import java.util.HashMap;
 import java.util.Map;
 
+import pt.personal.utf8utils.exceptions.NoValidatorException;
 import pt.personal.utf8utils.utils.ByteType;
 
 public class SimpleValidatorMiddleman implements ValidatorMiddleman {
@@ -18,12 +19,12 @@ public class SimpleValidatorMiddleman implements ValidatorMiddleman {
 	}
 
 	@Override
-	public Validator getValidatorFor(ByteType byteType) {
+	public Validator getValidatorFor(ByteType byteType) throws NoValidatorException {
 		if (validators.containsKey(byteType)) {
 			return validators.get(byteType);
 		}
 		
-		return null; // TODO: throw an exception here
+		throw new NoValidatorException();
 	}
 
 }

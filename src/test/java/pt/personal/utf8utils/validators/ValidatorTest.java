@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Suite.class)
 @SuiteClasses({
+	GenericValidatorTest.class,
 	Utf81ValidatorTest.class,
 	Utf82ValidatorTest.class,
 	Utf83ValidatorTest.class,

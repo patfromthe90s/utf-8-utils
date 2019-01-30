@@ -1,4 +1,4 @@
-package pt.personal.utf8utils.validators;
+	package pt.personal.utf8utils.validators;
 
 import pt.personal.utf8utils.utils.ByteType;
 import pt.personal.utf8utils.utils.Utf8ByteUtils;

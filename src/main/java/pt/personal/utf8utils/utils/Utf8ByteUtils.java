@@ -85,14 +85,14 @@ public class Utf8ByteUtils {
 	 * @see {@link <a href="https://tools.ietf.org/html/rfc3629#section-4">RFC-3629</a>}
 	 * 
 	 */
-	public static boolean isWithinRange(byte b, byte mask, int min, int max) {
+	/*public static boolean isWithinRange(byte b, byte mask, int min, int max) {
 		// TODO Maybe delete this method?
 		b &= 0xFF;
 		if (b >= min && b <= max) 
 			return true;
 		
 		return false;
-	}
+	} */
 	
 	public static boolean isWithinRange(byte b, int min, int max) {
 		int i = asUnsingned(b);
@@ -103,11 +103,11 @@ public class Utf8ByteUtils {
 		return b & 0xFF;
 	}
 
-	public static boolean isValidTailByte(byte b) {
+	/*public static boolean isValidTailByte(byte b) {
 		if (getByteType(b).equals(ByteType.UTF_8_TAIL))
 			return isWithinRange(b, Constants.UTF_8_TAIL_MIN, Constants.UTF_8_TAIL_MAX);
 			
 		return false;
-	}
+	}*/
 
 }
