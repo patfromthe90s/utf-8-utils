@@ -20,7 +20,7 @@ public class GenericValidatorTest {
 
 		@Override
 		String getValidationString() {
-			return null;
+			return "00 00"; // Used for checking length validation
 		}
 		
 	}
@@ -34,9 +34,19 @@ public class GenericValidatorTest {
 
 	
 	@Test
-	public void testValidates() {
+	public void testValidatesByteType() {
 		Assert.assertTrue(mockValidator.validates(mockByteType));
 		Assert.assertFalse(mockValidator.validates(notMockByteType));
+	}
+	
+	@Test
+	public void testByteLengthValidated() {
+		byte[] tooShort = new byte[] {0};
+		byte[] tooLong = new byte[] {0, 0, 0};
+		byte[] justRight = new byte[] {0, 0};
+		Assert.assertFalse(mockValidator.isValid(tooShort));
+		Assert.assertFalse(mockValidator.isValid(tooLong));
+		Assert.assertTrue(mockValidator.isValid(justRight));
 	}
 
 }
