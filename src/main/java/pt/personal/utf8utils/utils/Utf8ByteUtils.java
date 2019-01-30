@@ -19,7 +19,7 @@ public class Utf8ByteUtils {
 	 */
 	public class Constants {
 		public static final int UTF_8_TAIL_MIN = 0x80;
-		public static final int UTF_8_TAIL_MAX = 0x80;
+		public static final int UTF_8_TAIL_MAX = 0xBF;
 		public static final int UTF_8_1_MIN = 0x00;
 		public static final int UTF_8_1_MAX = 0x7F;
 		public static final int UTF_8_2_MIN = 0xC2;

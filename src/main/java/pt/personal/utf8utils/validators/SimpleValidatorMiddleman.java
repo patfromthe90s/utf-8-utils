@@ -14,6 +14,7 @@ public class SimpleValidatorMiddleman implements ValidatorMiddleman {
 		validators.put(ByteType.UTF_8_1, new Utf81Validator());
 		validators.put(ByteType.UTF_8_2, new Utf82Validator());
 		validators.put(ByteType.UTF_8_3, new Utf83Validator());
+		validators.put(ByteType.UTF_8_4, new Utf84Validator());
 	}
 
 	@Override
